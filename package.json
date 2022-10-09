@@ -1,0 +1,63 @@
+{
+  "name": "react-auto-clsx",
+  "version": "1.0.0",
+  "description": "主要解决再vite和webpack中className省略clsx，可以像Vue一样去编写样式",
+  "files": [
+    "jsx-runtime",
+    "jsx-dev-runtime"
+  ],
+  "keywords": [
+    "react",
+    "vite",
+    "webpack",
+    "className",
+    "clsx",
+    "runtime"
+  ],
+  "exports": {
+    "./jsx-runtime": {
+      "import": "./jsx-runtime/index.mjs",
+      "require": "./jsx-runtime/index.js",
+      "types": "./jsx-runtime/index.d.ts"
+    },
+    "./jsx-dev-runtime": {
+      "import": "./jsx-dev-runtime/index.mjs",
+      "require": "./jsx-dev-runtime/index.js",
+      "types": "./jsx-dev-runtime/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -c rollup.config.js --watch",
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zsh-crazy/react-auto-clsx.git"
+  },
+  "author": "zsh",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@types/node": "^18.7.19",
+    "@types/react": "^18.0.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "react": "^18.2.0",
+    "react-auto-clsx": "workspace:^2.1.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1"
+  },
+  "peerDependencies": {
+    "clsx": ">=1.2",
+    "react": ">=17"
+  }
+}

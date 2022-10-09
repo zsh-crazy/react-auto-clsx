@@ -6,10 +6,7 @@ export default [
   {
     input: './src/index.js',
     external:['react','clsx'],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-    ],
+
     output: [
       { format: 'cjs', file: "jsx-runtime/index.js", exports: 'auto',sourcemap:true },
       { format: 'esm', file: 'jsx-runtime/index.mjs',sourcemap:true},
@@ -19,10 +16,7 @@ export default [
   {
     input: './src/index.dev.js',
     external:['react','clsx'],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-    ],
+
     output: [
       { format: 'cjs', file: "jsx-dev-runtime/index.js", exports: 'auto',sourcemap:true },
       { format: 'esm', file: 'jsx-dev-runtime/index.mjs',sourcemap:true},

@@ -1,6 +1,6 @@
 {
   "name": "react-auto-clsx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "主要解决再vite和webpack中className省略clsx，可以像Vue一样去编写样式",
   "files": [
     "jsx-runtime",
